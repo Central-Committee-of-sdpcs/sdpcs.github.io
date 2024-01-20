@@ -11,7 +11,7 @@
     <header class="mdui-appbar mdui-appbar-fixed">
         <div class="mdui-container mdui-color-red">
             <div class="mdui-toolbar mdui-color-red">
-                <img src="sdpcs.github.io/shutdown.jpg" alt="shutdown icon" style="max-height: 24px; margin-right: 8px;">
+                <img src="https://sdpcs.github.io/shutdown.jpg" alt="shutdown icon" style="max-height: 24px; margin-right: 8px;">
                 <a href="#" class="mdui-typo-title mdui-text-color-yellow">七班关机党</a>
                 <div class="mdui-toolbar-spacer"></div>
                 <a href="#" class="mdui-typo-subheading mdui-text-color-yellow">Shut Down Party of Class Seven</a>
@@ -100,20 +100,7 @@
             var body = document.body;
             body.classList.toggle("mdui-theme-layout-dark");
 
-            // 切换深色模式时调整标题颜色和标题栏背景颜色
-            var titleElement = document.querySelector('.mdui-typo-title');
-            var toolbarElement = document.querySelector('.mdui-toolbar');
-            
-            if (body.classList.contains("mdui-theme-layout-dark")) {
-                titleElement.classList.remove('mdui-text-color-white');
-                titleElement.classList.add('mdui-text-color-black');
-                toolbarElement.classList.remove('mdui-color-black');
-                toolbarElement.classList.add('mdui-color-white');
-            } else {
-                titleElement.classList.remove('mdui-text-color-black');
-                titleElement.classList.add('mdui-text-color-white');
-                toolbarElement.classList.remove('mdui-color-white');
-                toolbarElement.classList.add('mdui-color-black');
+        
             }
         }
     </script>
