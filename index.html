@@ -15,7 +15,7 @@
                 <a href="#" class="mdui-typo-title mdui-text-color-yellow">七班关机党</a>
                 <div class="mdui-toolbar-spacer"></div>
                 <a href="#" class="mdui-typo-subheading mdui-text-color-yellow">Shut Down Party of Class Seven</a>
-                <button class="mdui-btn mdui-btn-icon" onclick="toggleDarkMode()">
+                <button class="mdui-btn mdui-btn-icon" id="darkModeToggle">
                     <i class="mdui-icon material-icons">brightness_4</i>
                 </button>
             </div>
@@ -98,10 +98,12 @@
     <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
 
     <script>
-        function toggleDarkMode() {
-            var body = document.body;
+        var darkModeToggle = document.getElementById('darkModeToggle');
+        var body = document.body;
+
+        darkModeToggle.addEventListener('click', function () {
             body.classList.toggle("mdui-theme-layout-dark");
-        }
+        });
     </script>
 </body>
 </html>
