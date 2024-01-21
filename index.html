@@ -101,15 +101,6 @@
         function toggleDarkMode() {
             var body = document.body;
             body.classList.toggle("mdui-theme-layout-dark");
-
-            // 切换深色模式时调整正文背景颜色
-            var contentElement = document.querySelector('.mdui-container');
-            
-            if (body.classList.contains("mdui-theme-layout-dark")) {
-                contentElement.style.backgroundColor = '#424242';  // 深色背景
-            } else {
-                contentElement.style.backgroundColor = '#fff';  // 浅色背景
-            }
         }
     </script>
 </body>
