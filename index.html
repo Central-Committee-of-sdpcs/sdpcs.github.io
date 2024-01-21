@@ -11,19 +11,24 @@
     <header class="mdui-appbar mdui-appbar-fixed">
         <div class="mdui-container mdui-color-red">
             <div class="mdui-toolbar mdui-color-red">
-                <img src="https://sdpcs.github.io/shutdown.jpg" alt="shutdown icon" style="max-height: 24px; margin-right: 8px;">
+                <img src="sdpcs.github.io/shutdown.jpg" alt="shutdown icon" style="max-height: 24px; margin-right: 8px;">
                 <a href="#" class="mdui-typo-title mdui-text-color-yellow">七班关机党</a>
                 <div class="mdui-toolbar-spacer"></div>
                 <a href="#" class="mdui-typo-subheading mdui-text-color-yellow">Shut Down Party of Class Seven</a>
+                <button class="mdui-btn mdui-btn-icon" onclick="toggleDarkMode()">
+                    <i class="mdui-icon material-icons">brightness_4</i>
+                </button>
             </div>
         </div>
     </header>
 
-    <div class="mdui-container" style="text-align: center;">
+    <div class="mdui-container" style="text-align: center; background-color: #fff;">
         <!-- 添加调整大小的照片 -->
         <img src="https://sdpcs.github.io/IMG_0568.jpg" alt="zmf的照片" class="mdui-img-rounded" style="max-width: 25%; margin-top: 80px;">
 
         <div class="mdui-typo">
+            <h1>七班关机党章程</h1>
+
             <a href="#introduction" class="mdui-btn mdui-btn-raised">序言</a>
             <a href="#overview" class="mdui-btn mdui-btn-raised">总纲</a>
             <a href="#organization" class="mdui-btn mdui-btn-raised">组织机构</a>
@@ -33,7 +38,7 @@
             <a href="#legal_responsibility" class="mdui-btn mdui-btn-raised">法律责任</a>
             <a href="#oath" class="mdui-btn mdui-btn-raised">宣誓</a>
 
-            <h3 id="introduction">序言</h3>
+            <h2 id="introduction">序言</h2>
             <p>七班同学们在社会主义事业的征途上，迎来了一个全新的篇章。我们团结一致，秉持着马克思列宁主义的指导思想，以社会主义制度为基石，携手努力，共同建设一个和谐、公正、平等的班级。然而，在这个充满理想的舞台上，我们也面临着一些困扰和挑战。</p>
 
             <p>郑铭蜂，作为现任信息技术委员，曾是我们班级的一位重要成员。然而，在信息技术方面的垄断和独裁统治，成为我们共同发展的绊脚石。他以一已私利为前提，霸占电脑，不听从中央的指挥，企图谋权篡位夺取最高权力。这样的行为违背了我们社会主义同学七班的初心和宗旨，阻碍了同学们共同奋斗的步伐。</p>
@@ -97,7 +102,13 @@
             var body = document.body;
             body.classList.toggle("mdui-theme-layout-dark");
 
-        
+            // 切换深色模式时调整正文背景颜色
+            var contentElement = document.querySelector('.mdui-container');
+            
+            if (body.classList.contains("mdui-theme-layout-dark")) {
+                contentElement.style.backgroundColor = '#424242';  // 深色背景
+            } else {
+                contentElement.style.backgroundColor = '#fff';  // 浅色背景
             }
         }
     </script>
